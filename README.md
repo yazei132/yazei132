@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.png" width="100%" alt="Eliel Marcos, desenvolvedor full stack: uma rota de coleta passa entre prateleiras de estoque até o pedido ser concluído" />
+  <img src="./assets/banner.png" width="100%" alt="Eliel Marcos, desenvolvedor full stack: web, mobile e APIs" />
 </p>
 
 ### Olá, eu sou o Eliel 👋
