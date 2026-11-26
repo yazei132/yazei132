@@ -1,8 +1,8 @@
 <!doctype html>
 <!--
-  Fonte do banner do perfil (assets/banner.png). Usa as fontes Bahnschrift e Consolas do Windows.
+  Fonte do banner do perfil (assets/banner.png). Usa as fontes Bahnschrift, Segoe UI e Consolas do Windows.
   Para gerar a imagem de novo, rode na pasta assets (PowerShell):
-  & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --hide-scrollbars --default-background-color=00000000 --force-device-scale-factor=2 --window-size=1200,300 --screenshot="$PWD\banner.png" "$PWD\banner.html"
+  & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --hide-scrollbars --default-background-color=00000000 --force-device-scale-factor=2 --window-size=1200,260 --screenshot="$PWD\banner.png" "$PWD\banner.html"
 -->
 <html lang="pt-BR">
 <head>
@@ -11,100 +11,48 @@
   html, body { margin: 0; padding: 0; background: transparent; }
   .banner {
     position: relative;
-    width: 1200px; height: 300px;
-    border-radius: 18px;
+    width: 1200px; height: 260px;
+    border-radius: 14px;
     overflow: hidden;
-    background:
-      radial-gradient(circle at 1px 1px, rgba(148,163,184,.13) 1px, transparent 0) 0 0 / 22px 22px,
-      radial-gradient(ellipse 45% 80% at 76% 50%, rgba(34,211,238,.13), transparent 70%),
-      radial-gradient(ellipse 40% 70% at 6% 100%, rgba(245,158,11,.10), transparent 70%),
-      linear-gradient(120deg, #080e1a 0%, #0c1626 55%, #0a1220 100%);
-    font-family: 'Bahnschrift', 'Segoe UI', sans-serif;
+    background: #f7f5f0;
+    box-shadow: inset 0 0 0 1px rgba(15,23,42,.08);
   }
   .text {
-    position: absolute; left: 72px; top: 0; bottom: 0;
+    position: absolute; left: 76px; top: 0; bottom: 0;
     display: flex; flex-direction: column; justify-content: center;
   }
   .kicker {
-    font-family: 'Consolas', monospace;
-    font-size: 17px; color: #67e8f9; opacity: .9;
-    margin-bottom: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 2px;
+    color: #0e7490;
   }
   .name {
-    font-size: 80px; font-weight: 700; line-height: 1;
-    color: #f8fafc; letter-spacing: .5px;
-    font-variation-settings: 'wdth' 90, 'wght' 700;
+    margin-top: 10px;
+    font-family: 'Bahnschrift', 'Segoe UI', sans-serif;
+    font-size: 72px; font-weight: 700; line-height: 1;
+    color: #111827; letter-spacing: -.5px;
+    font-variation-settings: 'wdth' 92, 'wght' 700;
   }
-  .role {
+  .tagline {
     margin-top: 16px;
-    font-size: 21px; font-weight: 600; letter-spacing: 5px; color: #fbbf24;
-    font-variation-settings: 'wdth' 100, 'wght' 600;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 23px; color: #4b5563;
   }
-
-  .editor {
-    position: absolute; left: 676px; top: 38px;
-    width: 470px; height: 224px;
-    border-radius: 12px;
-    background: rgba(11,18,32,.88);
-    border: 1px solid rgba(148,163,184,.24);
-    box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 0 60px rgba(34,211,238,.08);
-    overflow: hidden;
-  }
-  .bar {
-    height: 34px; display: flex; align-items: center; gap: 7px;
-    padding: 0 14px;
-    border-bottom: 1px solid rgba(148,163,184,.16);
-    background: rgba(30,41,59,.45);
-  }
-  .dot { width: 10px; height: 10px; border-radius: 50%; background: #334155; }
-  .file {
-    margin-left: 10px;
-    font-family: 'Consolas', monospace; font-size: 12.5px; color: #94a3b8;
-  }
-  pre {
-    margin: 0; padding: 12px 0;
-    font-family: 'Consolas', monospace; font-size: 15px; line-height: 24px;
-    color: #cbd5e1;
-  }
-  .ln { display: inline-block; width: 40px; text-align: right; padding-right: 16px; color: #475569; }
-  .k { color: #c4b5fd; }
-  .p { color: #67e8f9; }
-  .s { color: #86efac; }
-  .b { color: #fbbf24; }
-  .c { color: #64748b; }
-  .cursor {
-    display: inline-block; width: 9px; height: 18px; margin-left: 3px;
-    vertical-align: -3px; background: #67e8f9; opacity: .85;
-  }
-  .edge {
-    position: absolute; inset: 0; border-radius: 18px;
-    box-shadow: inset 0 0 0 1px rgba(148,163,184,.18);
-    pointer-events: none;
+  .mark {
+    position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
+    font-family: 'Consolas', monospace; font-size: 120px; font-weight: 700;
+    color: #0e7490; opacity: .10; letter-spacing: -6px;
   }
 </style>
 </head>
 <body>
 <div class="banner">
   <div class="text">
-    <div class="kicker">&gt; web · mobile · APIs</div>
+    <div class="kicker">DESENVOLVEDOR FULL STACK</div>
     <div class="name">Eliel Marcos</div>
-    <div class="role">DESENVOLVEDOR FULL STACK</div>
+    <div class="tagline">Web, mobile e APIs, do banco de dados até a tela.</div>
   </div>
-
-  <div class="editor">
-    <div class="bar">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      <span class="file">eliel.ts</span>
-    </div>
-<pre><span class="ln">1</span><span class="k">const</span> dev = {
-<span class="ln">2</span>  <span class="p">nome</span>: <span class="s">'Eliel Marcos'</span>,
-<span class="ln">3</span>  <span class="p">front</span>: [<span class="s">'React'</span>, <span class="s">'React Native'</span>],
-<span class="ln">4</span>  <span class="p">back</span>: [<span class="s">'Node.js'</span>, <span class="s">'Python'</span>, <span class="s">'PHP'</span>],
-<span class="ln">5</span>  <span class="p">dados</span>: [<span class="s">'PostgreSQL'</span>, <span class="s">'MySQL'</span>],
-<span class="ln">6</span>  <span class="p">aprendendo</span>: <span class="b">true</span>,
-<span class="ln">7</span>};<span class="cursor"></span></pre>
-  </div>
-  <div class="edge"></div>
+  <div class="mark">&lt;/&gt;</div>
 </div>
 </body>
 </html>
